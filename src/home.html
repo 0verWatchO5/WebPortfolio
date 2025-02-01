@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="matrix-overlay"></div> <!-- Falling code effect -->
+    <div class="scan-lines"></div> <!-- Scan lines -->
+    
+    <div class="container">
+        <h1 class="glitch">My Portfolio Access</h1>
+        <p class="typed-text">Initializing encrypted connection...</p>
+        
+        <div class="login">
+            <label for="password">Enter Access Code:</label>
+            <input type="password" id="password" placeholder="********">
+            <button onclick="checkAccess()">Authenticate</button>
+            <p id="message"></p>
+        </div>
+         <!-- Hidden section (will display after access) -->
+         <div class="secret-section">
+            <h2>Welcome to My Portfolio</h2>
+            <p>This is a secured space where my work and projects are revealed after authentication.</p>
+            <div class="inner-section">
+                <img src="assets/RP2.jpg" alt="My Profile Photo">
+                <h2>Mayuresh Chaubal</h2>
+            </div>    
+        </div>
+    </div>
+</body>
+<footer></footer>
+</html>
