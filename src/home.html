@@ -21,17 +21,26 @@
             <button onclick="checkAccess()">Authenticate</button>
             <p id="message"></p>
         </div>
-         <!-- Hidden section (will display after access) -->
-         <div class="secret-section">
+
+        <!-- Hidden section (only appears after access is granted) -->
+        <div class="secret-section hidden">
             <h2>Welcome to My Portfolio</h2>
             <p>This is a secured space where my work and projects are revealed after authentication.</p>
-            <div class="inner-section">
-                <img src="assets/RP2.jpg" alt="My Profile Photo">
-                <h2>Mayuresh Chaubal</h2>
-                <p id="cyber-text">
-                    <!-- JS prints the content -->
-                </p>
-            </div>    
+            
+            <div class="profile-container">
+                <!-- Profile Image -->
+                <div class="profile-image">
+                    <img src="assets/RP2.jpg" alt="My Profile Photo">
+                </div>
+                
+                <!-- About Me Section -->
+                <div class="about-me">
+                    <h2>Mayuresh Chaubal</h2>
+                    <p id="cyber-text">
+                        <!-- JavaScript prints the content here -->
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </body>

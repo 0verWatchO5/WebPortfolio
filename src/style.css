@@ -6,7 +6,7 @@ body {
     color: #00FF41;
     text-align: center;
     padding: 20px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* Glitch animation for header */
@@ -44,53 +44,14 @@ h1.glitch {
     50% { border-color: transparent; }
 }
 
-/* Login box */
-.login {
-    background: rgba(0, 0, 0, 0.8);
+/* Centering the container */
+.container {
+    max-width: 800px;
+    margin: auto;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px #00FF41;
-    margin: 20px auto;
-    width: 300px;
 }
 
-.login label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1rem;
-    text-shadow: 0px 0px 5px #00FF41;
-}
-
-.login input {
-    width: 100%;
-    padding: 10px;
-    background: black;
-    border: 1px solid #00FF41;
-    color: #00FF41;
-    font-size: 1rem;
-    text-align: center;
-    outline: none;
-}
-
-.login button {
-    background: #00FF41;
-    border: none;
-    color: black;
-    font-size: 1rem;
-    padding: 10px;
-    width: 100%;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.login button:hover {
-    background: black;
-    color: #00FF41;
-    border: 1px solid #00FF41;
-}
-
-/* Secret Section (Hidden initially) */
+/* Secret Section Styling */
 .secret-section {
     display: none;
     background-color: #022136;
@@ -98,13 +59,80 @@ h1.glitch {
     border-radius: 10px;
     box-shadow: 0px 0px 15px #00FF41;
     margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Profile Image */
-img {
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Profile Image and About Section */
+.inner-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.profile-image {
+    text-align: center;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 3px solid #00FF41;
-    margin-top: 20px;
+    box-shadow: 0 0 10px #00FF41;
+}
+
+.about-me {
+    max-width: 500px;
+}
+
+.about-me h2 {
+    font-size: 1.5rem;
+    text-shadow: 0px 0px 8px #00FF41;
+}
+
+.about-me p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Buttons and Inputs */
+button {
+    background: #00FF41;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #008F11;
+}
+
+input {
+    background: black;
+    border: 1px solid #00FF41;
+    color: #00FF41;
+    padding: 10px;
+    font-size: 18px;
+    width: 80%;
+    margin: 10px 0;
+    border-radius: 5px;
 }
 
 /* Matrix Overlay */
@@ -114,7 +142,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('assets/matrix.gif'); /* Add matrix animation GIF */
+    background: url('assets/matrix.gif');
     opacity: 0.2;
     z-index: -1;
 }
@@ -130,121 +158,4 @@ img {
     background-size: 100% 4px;
     z-index: -1;
     opacity: 0.2;
-}
-
-@keyframes scan-move {
-    from { background-position: 0 0; }
-    to { background-position: 0 -100px; }
-}
-
-/* Styling for the login box */
-.login {
-    display: block;  /* Ensure the login box is visible initially */
-    margin-top: 20px;
-    padding: 20px;
-    background: #111;
-    border: 1px solid #00FF41;
-    border-radius: 10px;
-    width: 300px;
-    margin: 50px auto;
-    text-align: center;
-    position: relative; /* Keeps login box in front */
-}
-
-/* Unlock animation */
-.unlock-animation {
-    animation: unlock 2s forwards;
-}
-
-@keyframes unlock {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.1); opacity: 0.7; }
-    100% { transform: scale(0); opacity: 0; }
-}
-
-/* Apply new look after unlocking */
-.unlocked {
-    background-color: #002b36;  /* Cybersecurity dark blue */
-    color: #00FF41;
-    transition: all 1s ease-in-out;
-    text-align: center;
-}
-
-/* Denial effect - red flicker */
-.denied {
-    background-color: red !important;
-    animation: denied-flicker 0.5s;
-}
-
-@keyframes denied-flicker {
-    0% { background-color: red; }
-    50% { background-color: black; }
-    100% { background-color: red; }
-}
-
-/* Styling for input and button */
-input {
-    background: black;
-    border: 1px solid #00FF41;
-    color: #00FF41;
-    padding: 10px;
-    font-size: 18px;
-    width: 80%;
-    margin: 10px 0;
-    border-radius: 5px;
-}
-
-button {
-    background: #00FF41;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background: #008F11;
-}
-/* Secret section (hidden by default) */
-.secret-section {
-    display: none; /* Hide initially */
-    margin-top: 40px;
-    color: #00FF41;
-    padding: 20px;
-    background-color: #002b36; /* Soft cyber blue */
-    border-radius: 10px;
-    text-align: center;
-    opacity: 0; /* Initially invisible */
-    transition: opacity 1s ease-in-out;
-}
-
-/* Unlock animation for the secret section */
-.unlocked .secret-section {
-    display: block;
-    opacity: 1; /* Make visible when unlocked */
-    animation: revealContent 2s ease-in-out forwards;
-}
-
-@keyframes revealContent {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-.secret-section .inner-section {
-    margin-top: 20px;
-    padding-top: 20px;
-}
-.inner-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    text-shadow: #002b36;
-    align-self: right;
-}
-.inner-section img {
-    width: 60%;
-    max-width: 250px;
-    margin: 0 auto;
-    display: block;
-    border-radius: 200px;
-    /* box-shadow: 0 0 10px #00FF41; */
 }
