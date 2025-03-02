@@ -115,10 +115,11 @@ nav ul {
     width: var(--width);
     height: var(--height);
     background: var(--button-color);
+    margin-left: -21px;
     position: relative;
     text-align: center;
     border-radius: 0.45em;
-    font-family: "Arial";
+    /* font-family: "Arial"; */
     transition: 0.3s;
     display: inline-flex;
     cursor: pointer;
@@ -230,7 +231,9 @@ nav ul {
     border: 10px solid #1f2f33;
     margin: 0 80px;
   }
-  
+  .button a {
+    text-decoration: none;
+  }
   .btn-box {
     display: inline-flex;
     margin: 20px;
