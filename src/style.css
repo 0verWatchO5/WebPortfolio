@@ -35,3 +35,44 @@ body {
     scrollbar-color: #234e70 #e0e0e0;
 }
 /* for custom scrollbars */
+
+/* For nav bar */
+nav {
+    /* background-image: url(images/navbg.png); */
+    background-color: #1f2f33; 
+    overflow:hidden;
+    height: fit-content;
+}
+nav img {
+    width: 50px;
+}
+nav ul a {
+    float: left;
+    padding-top: 0px;
+    padding-left: 75px;
+    padding-right: 35px;
+}
+nav a {
+    float: right;
+    color: white;
+    padding: 10px;
+    padding-top: 0px;
+    text-align: center;
+    text-decoration: none;
+   
+}
+.nav-links {
+  
+    list-style: none;
+    padding: 0;
+    padding-bottom: 40px;
+    margin: 0;
+}
+nav a:hover {
+    color: #1b18d6;
+}
+nav ul {
+    padding: 3px;
+    padding-top: 0%;
+    
+}
