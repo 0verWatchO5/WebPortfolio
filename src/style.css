@@ -4,11 +4,11 @@
 body, html {
     margin: 0;
     padding: 0;
+    background-color: #a3b4c4;
     width: 100%;
     height: fit-content;
     scroll-behavior: smooth;
 }
-
 /* For WebKit browsers */
 ::-webkit-scrollbar {
     width: 15px;
@@ -20,19 +20,19 @@ body, html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #234E70;
+    background-color: #1f2f33;
     border-radius: 5px;
     border: 3px solid #e0e0e0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #0f283b;
+    background-color: #1f2f33;
 }
 
 /* For Firefox */
 body {
     scrollbar-width: thin;
-    scrollbar-color: #234e70 #e0e0e0;
+    scrollbar-color: #1f2f33 #e0e0e0;
 }
 /* for custom scrollbars */
 
@@ -42,9 +42,11 @@ nav {
     background-color: #1f2f33; 
     overflow:hidden;
     height: fit-content;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 nav img {
     width: 50px;
+    border-radius: 100px;
 }
 nav ul a {
     float: left;
@@ -62,14 +64,13 @@ nav a {
    
 }
 .nav-links {
-  
+    padding-right: 5%;
     list-style: none;
-    padding: 0;
     padding-bottom: 40px;
     margin: 0;
 }
 nav a:hover {
-    color: #1b18d6;
+    color: #a3b4c4;
 }
 nav ul {
     padding: 3px;
