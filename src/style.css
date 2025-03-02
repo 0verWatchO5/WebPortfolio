@@ -86,7 +86,7 @@ nav ul {
   }
   .blur{
     position: absolute;
-    box-shadow: 0 0 1000px 50px #1163ff;
+    box-shadow: 0 0 1000px 50px #1f2f33;
   }
   .home-content {
     max-width: 600px;
@@ -95,13 +95,15 @@ nav ul {
   .home-content h1 {
     font-size: 55px;
     font-weight: 700;
+    margin: 0%;
   }
   
   .home-content h3 {
     font-size: 40px;
     font-weight: 700;
     color: #1f2f33;
-    display: flex;
+    margin: 0%;
+    /* display: flex; */
   }
   
   .button {
